@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shit-o-lator v.4.0!!! ;)</title>
+<style>h1,h2,p{text-align:center;}</style>
+</head>
+<body>
+    <form action="/calculate" method="post">
+        <br><h1>Shit-o-lator v.4.0!!! ;)</h1><h2>Please, input the digits and choose operation:</h2>
+        <p><input type="text" size="8" name="dig1" placeholder="1st digit">
+        <input type="radio" name="oper" value="+" checked>+&nbsp;
+        <input type="radio" name="oper" value="-">-&nbsp;
+        <input type="radio" name="oper" value="*">*&nbsp;
+        <input type="radio" name="oper" value="/">/&nbsp;
+        <input type="text" size="8" name="dig2" placeholder="2nd digit"> =
+        <input type="submit" value="Calculate"></p>
+    </form>
+    <div><h1>{{ message }}</div>
+</body>
+</html>
