@@ -1,3 +1,2 @@
-# Flask-Shit-o-lator
-
-The v.4.0 of Shit-o-lator — on Flask
+Flask-Shit-o-lator v.4.1
+With simple jinja, static files and fixed code
