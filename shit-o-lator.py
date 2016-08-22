@@ -39,7 +39,7 @@ def calculate():
     if summ - int(summ) == 0:
         message = "The result is: {}".format(int(summ))
     else:
-        message = "The result is: {0:.2f}".format(summ)
+        message = "The result is: {0:.3f}".format(summ)
     # Output
     return render_template('message.html', message = message)
 
