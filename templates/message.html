@@ -1,0 +1,14 @@
+{% extends "shit-o-lator.html" %}
+    {% block message %}
+        {% if exception %}
+            {% if exception == 'EmptyFieldError' %}
+                Please, fill the fields!
+            {% elif exception == 'DivZeroError' %}
+                You can't divide on zero!
+            {% else %}
+                Please, input the digits!
+            {% endif %}
+        {% else %}
+            The result is: {{message}}
+        {% endif %}
+    {% endblock %}
