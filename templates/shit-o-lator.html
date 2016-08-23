@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shit-o-lator v.4.2!!! ;)</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <p><img src="/static/img/calc.png" width="100"></p>
+    <form action="/calculate" method="post">
+        <h1>Shit-o-lator v.4.2!!! ;)</h1><h2>Please, input the digits and choose an operation:</h2>
+        <p><input type="text" size="8" name="digit1" placeholder="1st digit">
+        <input type="radio" name="operation" value="+" checked>+&nbsp;
+        <input type="radio" name="operation" value="-">-&nbsp;
+        <input type="radio" name="operation" value="*">*&nbsp;
+        <input type="radio" name="operation" value="/">/&nbsp;
+        <input type="text" size="8" name="digit2" placeholder="2nd digit"> =
+        <input type="submit" value="Calculate"></p>
+    </form>
+    <div><h1>{% block message %}{% endblock %}</div>
+</body>
+</html>
