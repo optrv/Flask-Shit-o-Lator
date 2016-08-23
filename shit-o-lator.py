@@ -36,17 +36,16 @@ def calculate():
     except (EmptyFieldError, DivZeroError, InvalidOperation) as exception:
         return render_template('message.html', exception = exception.args[0])
 
-    # Calculation
-    operation_kind = {'+': digit1 + digit2,
-                      '-': digit1 - digit2,
-                      '*': digit1 * digit2,
-                      '/': digit1 / digit2}
-    for n in operation_kind:
-        if n == operation:
-            summ = operation_kind[n]
+   # Calculation
+    operation_kind = {'+': lambda digit1, digit2: digit1 + digit2,
+                      '-': lambda digit1, digit2: digit1 - digit2,
+                      '*': lambda digit1, digit2: digit1 * digit2,
+                      '/': lambda digit1, digit2: digit1 / digit2}
+
+    summ = operation_kind[operation](digit1, digit2)
 
     # Output
-    message = "The result is: {0:.4g}".format(summ)
+    message = "{0:.4g}".format(summ)
     return render_template('message.html', message = message)
 
 if __name__ == '__main__':
