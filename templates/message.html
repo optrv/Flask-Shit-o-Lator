@@ -2,11 +2,11 @@
     {% block message %}
         {% if exception %}
             {% if exception == 'EmptyFieldError' %}
-            Please, fill the fields!
+                Please, fill the fields!
             {% elif exception == 'DivZeroError' %}
-            You can't divide on zero!
+                You can't divide on zero!
             {% else %}
-            Please, input the digits!
+                Please, input the digits!
             {% endif %}
         {% endif %}
     {{message}}
